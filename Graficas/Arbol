@@ -1,0 +1,14 @@
+// Graph 20230921-121658
+digraph {
+	node [fillcolor=cornflowerblue fontcolor=black shape=ellipse style=filled]
+	node [fillcolor=cornflowerblue fontcolor=black shape=ellipse style=filled]
+	nodo47 [label=10]
+	nodo48 [label=4]
+	nodo49 [label="}"]
+	nodo50 [label=4]
+	nodo51 [label=2]
+	nodo52 [label=9]
+	nodo53 [label="}"]
+	nodo54 [label="}"]
+	nodo55 [label=5.32]
+}
