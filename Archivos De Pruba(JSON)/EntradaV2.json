@@ -1,0 +1,59 @@
+{
+  "operaciones": [
+    {
+      "operacion": "SuMa",
+      "valor1": 10,
+      "valor2": 2
+    }, 
+    {
+      "operacion": "resta",
+      "valor1": 10,
+      "valor2": 2
+    },
+    {
+      "operacion": "multiplicacion",
+      "valor1": 10,
+      "valor2": 2
+    },
+    {
+      "operacion": "division",
+      "valor1": 10,
+      "valor2": 2
+    },
+    {
+      "operacion": "potencia",
+      "valor1": 10,
+      "valor2": 2
+    },
+    {
+      "operacion": "raiz",
+      "valor1": 4,
+      "valor2": 2
+    },
+    {
+      "operacion": "inverso",
+      "valor1": 10
+    },
+    {
+      "operacion": "sEno",
+      "valor1": 90
+    },
+    {
+      "operacion": "Coseno",
+      "valor1": 90
+    },
+    {
+      "operacion": "tangente",
+      "valor1": 90
+    },
+    {
+      "operacion": "mOd",
+      "valor1": 10,
+      "valor2": 3
+    }        
+  ]
+}
+
+
+
+
