@@ -26,21 +26,26 @@ El programa fue desarrollado en el lenguaje de programación Python, el mismo pe
 En la práctica se utilizaron las siguientes clases:
 
 Clase Ventana() utilizada para inicializar las variables y mostrar la ventana del texto a ingresar y posteriormente a ser analizado:
+
 ![ImagenesDeMarcdown](https://i.ibb.co/NpHX9kv/image.png)
 
 La Clase TextLineNumbers() permite que en el area de texto se muestre la numeracion de las lineas ingresadas y al mismo tiempo se actualiza con el ingreso de archivos json al mismo:
+
 ![ObtenerLink](https://i.ibb.co/vJHtXJV/image.png)
 
 La Clase ExpresionAritmetica() permite que las operaciones de aritmetica se ejecuten sin ningun proble:
+
 ![ObtenerLink](https://i.ibb.co/vXFKK0z/image.png)
 
 La Clase ExpresionTrigonometrica() permite que las instruciones del json que indique alguna operacion Trigonometrica, esta pueda ser operada por esta clase: 
+
 ![ObtenerLink](https://i.ibb.co/x8z8kKS/image.png)
 
 La Clase Arbol() permite que se almacenen los nodos de cada operacion y al finalizar la carga de archivos se pueda generar la grafica, a travez de la libreria de graphviz: 
+
 ![ObtenerLink](https://i.ibb.co/94FBjc5/image.png)
 
-Tabla con las funciones que se encuentran dentro del sistema de registro de inventario:
+Tabla con las funciones que se encuentran dentro del sistema de analisis:
 | Función                          | Especificación                                                                                                 |
 | -------------------------------- | --------------------------------------------------------------------------------------------------------------- |
 | `ScrollText(tk.Frame)`      | Permite que en area de texto se pueda navegar y con la misma actualizar los numeros de lineas.                                          |
