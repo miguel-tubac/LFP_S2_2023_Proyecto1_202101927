@@ -29,7 +29,7 @@ class Arbol:
         self.dot.edge(nodo1, nodo2)
 
     def generarGrafica(self):
-        self.dot.render("Graficas/Arbol", view=True)
+        self.dot.render("Graficas/RESULTADOS_202101927", view=True)
         #self.dot.save("Graficas/Arbol.dot")
 
     def obtenerUltimoNodo(self):

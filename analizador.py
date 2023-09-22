@@ -202,7 +202,7 @@ def archivoDeSalida():
     resultado_json = {"errores": errores_json}
 
     # Nombre del archivo de salida JSON
-    nombre_archivo = "errores.json"
+    nombre_archivo = "RESULTADOS_202101927.json"
 
     # Escribe el diccionario JSON en el archivo
     with open(nombre_archivo, "w") as archivo_json:

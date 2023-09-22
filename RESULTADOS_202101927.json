@@ -3,15 +3,6 @@
         {
             "No": 1,
             "descripcion": {
-                "lexema": "@",
-                "tipo": "Error Lexico",
-                "columna": 21,
-                "fila": 10
-            }
-        },
-        {
-            "No": 2,
-            "descripcion": {
                 "lexema": "!",
                 "tipo": "Error Lexico",
                 "columna": 64,

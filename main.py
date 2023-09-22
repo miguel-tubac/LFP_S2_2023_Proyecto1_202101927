@@ -180,7 +180,7 @@ class Ventana(tk.Tk):
 
     # Función para mostrar un mensaje de información
     def mostrar_infoError(self):
-        messagebox.showinfo("Información", "Archivo JSON 'errores.json' creado con éxito.")
+        messagebox.showinfo("Información", "Archivo JSON 'RESULTADOS_202101927.json' creado con éxito.")
 
         # Función que habilita el botón
     def habilitar_boton(self):

@@ -1,0 +1,52 @@
+// Graph 20230922-010458
+digraph {
+	node [fillcolor=aliceblue fontcolor=black shape=ellipse style=filled]
+	node [fillcolor=aliceblue fontcolor=black shape=ellipse style=filled]
+	nodo42 [label=10]
+	nodo43 [label=2]
+	nodo44 [label="suma\n12"]
+	nodo44 -> nodo42
+	nodo44 -> nodo43
+	nodo45 [label=10]
+	nodo46 [label=2]
+	nodo47 [label="resta\n8"]
+	nodo47 -> nodo45
+	nodo47 -> nodo46
+	nodo48 [label=10]
+	nodo49 [label=2]
+	nodo50 [label="multiplicacion\n20"]
+	nodo50 -> nodo48
+	nodo50 -> nodo49
+	nodo51 [label=10]
+	nodo52 [label=2]
+	nodo53 [label="division\n5.0"]
+	nodo53 -> nodo51
+	nodo53 -> nodo52
+	nodo54 [label=10]
+	nodo55 [label=2]
+	nodo56 [label="potencia\n100.0"]
+	nodo56 -> nodo54
+	nodo56 -> nodo55
+	nodo57 [label=4]
+	nodo58 [label=2]
+	nodo59 [label="raiz\n2.0"]
+	nodo59 -> nodo57
+	nodo59 -> nodo58
+	nodo60 [label=10]
+	nodo61 [label="inverso\n0.1"]
+	nodo61 -> nodo60
+	nodo62 [label=90]
+	nodo63 [label="seno\n0.894"]
+	nodo63 -> nodo62
+	nodo64 [label=90]
+	nodo65 [label="coseno\n-0.4481"]
+	nodo65 -> nodo64
+	nodo66 [label=90]
+	nodo67 [label="tangente\n-1.9952"]
+	nodo67 -> nodo66
+	nodo68 [label=10]
+	nodo69 [label=3]
+	nodo70 [label="mod\n1"]
+	nodo70 -> nodo68
+	nodo70 -> nodo69
+}
