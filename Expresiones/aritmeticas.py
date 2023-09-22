@@ -59,8 +59,6 @@ class ExpresionAritmetica(Expresion):
                 resultado = math.pow(valor1, valor2)
             elif self.tipo == "raiz":
                 resultado = math.pow(valor1, 1 / valor2)
-            elif self.tipo == "inverso":
-                resultado = (1/valor1)
             elif self.tipo == "mod":
                 resultado = (valor1 % valor2)
 
@@ -77,7 +75,8 @@ class ExpresionAritmetica(Expresion):
                     arbol.agregarArista(raiz, nodo2)
                 return round(resultado,4)
         except Exception as e:
-            print("Error: Operacion iválida(aritmetica).",e)
+            print()
+            #print("Error: Operacion iválida(aritmetica).",e)
         #return round(resultado,2)
 
     def __str__(self) -> str:

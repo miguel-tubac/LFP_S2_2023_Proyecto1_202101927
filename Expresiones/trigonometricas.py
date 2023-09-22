@@ -35,11 +35,14 @@ class ExpresionTrigonometrica(Expresion):
                 resultado = math.cos(valor)
             elif self.tipo == "tangente":
                 resultado = math.tan(valor)
+            elif self.tipo == "inverso":
+                resultado = (1/valor)
 
             # GRAFICAR
-            raiz = arbol.agregarNodo(f"{self.tipo}\\n{str(round(resultado,2))}")
+            raiz = arbol.agregarNodo(f"{self.tipo}\\n{str(round(resultado,4))}")
             arbol.agregarArista(raiz, nodo)
 
-            return round(resultado, 2)
+            return round(resultado, 4)
         except Exception as e:
-            print("Error: Operacion iválida(trigonometrica).",e)
+            print()
+            #print("Error: Operacion iválida(trigonometrica).",e)

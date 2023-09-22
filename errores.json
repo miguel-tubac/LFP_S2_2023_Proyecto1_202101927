@@ -6,7 +6,7 @@
                 "lexema": "@",
                 "tipo": "Error Lexico",
                 "columna": 21,
-                "fila": 136
+                "fila": 10
             }
         },
         {
@@ -15,16 +15,7 @@
                 "lexema": "!",
                 "tipo": "Error Lexico",
                 "columna": 64,
-                "fila": 147
-            }
-        },
-        {
-            "No": 3,
-            "descripcion": {
-                "lexema": "#",
-                "tipo": "Error Lexico",
-                "columna": 48,
-                "fila": 153
+                "fila": 21
             }
         }
     ]

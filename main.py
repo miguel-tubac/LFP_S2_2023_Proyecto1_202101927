@@ -1,5 +1,6 @@
 import tkinter as tk
 from tkinter import *
+from tkinter import messagebox
 from tkinter.filedialog import askopenfilename, asksaveasfilename
 from analizador import analizar,archivoDeSalida
 
@@ -108,9 +109,9 @@ class Ventana(tk.Tk):
         self.filemenu.add_separator()
         self.filemenu.add_command(label="Salir", command=self.quit)
 
-        self.menu.add_command(label="Analizar", command=self.analizar_texto )
-        self.menu.add_command(label="Errores", command=self.creacionArchivoDeErrores)
-        self.menu.add_command(label="Reporte(Grafica)", command=self.generarDigramas )
+        self.menu.add_command(label="Analizar", command=self.analizar_texto)
+        self.menu.add_command(label="Errores", command=self.creacionArchivoDeErrores, state=tk.DISABLED)
+        self.menu.add_command(label="Reporte(Grafica)", command=self.generarDigramas , state=tk.DISABLED)
 
     def open_file(self):
         filepath = askopenfilename(
@@ -152,24 +153,39 @@ class Ventana(tk.Tk):
         self.title(f"Proyecto 1 - {filepath}")
 
     def analizar_texto(self):
-        print("Analizando...")
+        #print("Analizando...")
         text = self.scroll.get(1.0, tk.END) 
         arbol = analizar(text)
+        self.mostrar_info()
+        self.habilitar_boton()
         #print(arbol.dot.source)
         #arbol.dot.view()
         #arbol.generarGrafica()
 
     #----------aqui se dee de poner la funcion que me genere el archivo de errores------
     def creacionArchivoDeErrores(self):
-        print("Creando Archivo de Errores...")
+        #print("Creando Archivo de Errores...")
         archivoDeSalida()
+        self.mostrar_infoError()
         
     def generarDigramas(self):
-        print("Generando Diagrama...")
+        #print("Generando Diagrama...")
         text = self.scroll.get(1.0, tk.END) 
         arbol = analizar(text)
         arbol.generarGrafica()
-        
+    
+    # Función para mostrar un mensaje de información (Analizandor)
+    def mostrar_info(self):
+        messagebox.showinfo("Información", "Texto Analizado con Exito.")
+
+    # Función para mostrar un mensaje de información
+    def mostrar_infoError(self):
+        messagebox.showinfo("Información", "Archivo JSON 'errores.json' creado con éxito.")
+
+        # Función que habilita el botón
+    def habilitar_boton(self):
+        self.menu.entryconfig("Errores", state=tk.NORMAL)
+        self.menu.entryconfig("Reporte(Grafica)", state=tk.NORMAL)
 
 app = Ventana()
 app.mainloop()

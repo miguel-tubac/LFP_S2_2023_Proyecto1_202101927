@@ -58,6 +58,8 @@ def tokenize_number(input_str, i):
 def tokenize_input(input_str):
     # referenciar las variables globales
     global line, col, tokens
+    line = 0
+    col = 0
     # iterar sobre cada caracter del input
     i = 0
     # mientras no se llegue al final del input
@@ -102,12 +104,12 @@ def tokenize_input(input_str):
         #-------------Este error se deve de ingresar al json de salida-----------------     
         else:
             # se almacena el error utilizando la clase Error
-            errores.append(Error(char, 'Error Lexico', col + 1, line))
+            errores.append(Error(char, 'Error Lexico', col + 1, line+1))
             i += 1
             col += 1
     # Se recorren los errores de entrada para verlos
-    for error in errores:
-        print(error)
+    # for error in errores:
+    #     print(error)
 
 # crear las instrucciones a partir de los tokens
 def get_instruccion():
@@ -140,15 +142,17 @@ def get_instruccion():
                 configuracion[token.value] = tokens.pop(0).value
             # else:
             #     print("\033[1;31;40m Error: token desconocido:", token, "\033[0m")
+            temporal = str(operacion).lower()
 
-            if operacion and value1 and value2:
-                return ExpresionAritmetica(operacion, value1, value2, 0, 0)
+            if temporal and value1 and value2:
+                return ExpresionAritmetica(temporal, value1, value2, 0, 0)
             
             #----agregar el coseno, tangente:------
-            if operacion and operacion in ["seno", "coseno", "tangente"] and value1:
-                return ExpresionTrigonometrica(operacion, value1, 0, 0)
+            if temporal and temporal in ["seno", "coseno", "tangente", "inverso"] and value1:
+                return ExpresionTrigonometrica(temporal, value1, 0, 0)
         except Exception as e:
-            print("Error: en la funcion get_instruccion.")
+            print()
+            #print("Error: en la funcion get_instruccion.")
             continue
     return None
 
@@ -204,4 +208,5 @@ def archivoDeSalida():
     with open(nombre_archivo, "w") as archivo_json:
         json.dump(resultado_json, archivo_json, indent=4)
 
-    print(f"Archivo JSON '{nombre_archivo}' creado con éxito.")
+    # Mensaje de salida
+    #print(f"Archivo JSON '{nombre_archivo}' creado con éxito.")
